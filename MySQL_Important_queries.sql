@@ -23,3 +23,7 @@ SELECT * FROM information_schema.user_privileges;
 
 -- Формат даты с автозаполнением
 mydate TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+
+-- Установка нумерации строк
+set @rn = 0;
+SELECT (@rn:=@rn + 1) AS num, column_name FROM table_name
