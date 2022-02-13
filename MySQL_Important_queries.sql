@@ -5,7 +5,7 @@ CREATE USER vitaly IDENTIFIED BY 'password';
 -- Установка пароля root пользователя для локального доступа
 ALTER USER 'root'@'localhost' IDENTIFIED BY 'password';
 -- Разрешение удаленного доступа для root
-UPDATE user SET host ='%' WHERE host ='loc # Cброс привилегийalhost' AND user ='root';
+UPDATE user SET host ='%' WHERE host ='localhost' AND user ='root';
 -- Установка пароля пользователя root для удаленного доступа
 ALTER USER 'root'@'%' IDENTIFIED BY 'password';
 -- Выдача полных прав root пользователю
